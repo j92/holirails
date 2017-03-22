@@ -1,2 +1,17 @@
-<h1>Holidays#index</h1>
-<p>Find me in app/views/holidays/index.html.erb</p>
+<h1>Listing holidays</h1>
+
+<table>
+  <tr>
+    <th>Start</th>
+    <th>End</th>
+    <th>Comment</th>
+  </tr>
+
+  <% @holidays.each do |holiday| %>
+      <tr>
+        <td><%= holiday.start_date %></td>
+        <td><%= holiday.end_date %></td>
+        <td><%= link_to 'Show', holiday_path(holiday) %></td>
+      </tr>
+  <% end %>
+</table>
