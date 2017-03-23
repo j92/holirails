@@ -1,0 +1,19 @@
+<h1>New contract</h1>
+<%= form_for :contract, url: contracts_path do |f| %>
+    <p>
+      <strong>Company</strong>
+      <%= @contract.company %>
+    </p>
+    <p>
+      <strong>Start date</strong>
+      <%= @contract.start_date %>
+    </p>
+    <p>
+      <strong>End date</strong>
+      <%= @contract.end_date %>
+    </p>
+    <p>
+      <strong>Holiday amount</strong>
+      <%= @contract.holiday_amount %>
+    </p>
+<% end %>
