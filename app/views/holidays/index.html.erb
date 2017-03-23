@@ -1,5 +1,5 @@
 <h1>Listing holidays</h1>
-
+<%= link_to 'New holiday', new_holiday_path %>
 <table>
   <tr>
     <th>Start</th>
@@ -11,7 +11,9 @@
       <tr>
         <td><%= holiday.start_date %></td>
         <td><%= holiday.end_date %></td>
+        <td><%= holiday.comment %></td>
         <td><%= link_to 'Show', holiday_path(holiday) %></td>
+        <td><%= link_to 'Edit', edit_holiday_path(holiday) %></td>
       </tr>
   <% end %>
 </table>

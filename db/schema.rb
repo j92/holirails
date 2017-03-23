@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20170322184119) do
   create_table "holidays", force: :cascade do |t|
     t.datetime "start_date"
     t.datetime "end_date"
+    t.decimal  "duration"
     t.text     "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

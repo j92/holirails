@@ -7,6 +7,10 @@ class HolidaysController < ApplicationController
 
   end
 
+  def edit
+    @holiday = Holiday.find(params[:id])
+  end
+
   def create
     @holiday = Holiday.new(holiday_params)
 
@@ -20,6 +24,6 @@ class HolidaysController < ApplicationController
 
   private
     def holiday_params
-      params.require(:holiday).permit(:start_date, :end_date, :comment)
+      params.require(:holiday).permit(:start_date, :end_date, :duration, :comment)
     end
 end
