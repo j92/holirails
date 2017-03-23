@@ -4,6 +4,7 @@
   <tr>
     <th>Start</th>
     <th>End</th>
+    <th>Duration</th>
     <th>Comment</th>
   </tr>
 
@@ -11,6 +12,7 @@
       <tr>
         <td><%= holiday.start_date %></td>
         <td><%= holiday.end_date %></td>
+        <td><%= holiday.duration %></td>
         <td><%= holiday.comment %></td>
         <td><%= link_to 'Show', holiday_path(holiday) %></td>
         <td><%= link_to 'Edit', edit_holiday_path(holiday) %></td>
